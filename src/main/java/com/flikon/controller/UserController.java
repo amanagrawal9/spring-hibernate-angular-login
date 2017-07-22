@@ -52,12 +52,8 @@ public class UserController {
             return "registration";
         }
 
-        JSONObject responseStatus = userService.saveUser(userForm);
+        userService.saveUser(userForm);
 
-        if(responseStatus != null && "failed".equals(responseStatus.getString("Response Status"))) {
-        	bindingResult.rejectValue("salesforceStatus", "", responseStatus.getString("Response Text"));
-        	return "registration";
-        }
         securityService.autologin(userForm.getEmail(), userForm.getPasswordConfirm());
 
         return "welcome";

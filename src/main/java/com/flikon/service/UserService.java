@@ -12,22 +12,18 @@ import com.flikon.wrapper.UserInfo;
 
 @Service
 public class UserService{
+
     @Autowired
     private UserRepository userRepository;
+
     @Autowired
     private RoleRepository roleRepository;
+
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
-    @Autowired
-    private SalesforceService salesforceService;
 
-    public JSONObject saveUser(UserInfo userInfo) {
-    	JSONObject response = salesforceService.createContact(userInfo);
-    	
-    	if(response != null && "success".equals(response.getString("Response Status"))) {
-    		userRepository.save(adaptUserInfoToUser(userInfo));
-    	}
-    	return response;
+    public void saveUser(UserInfo userInfo) {
+		userRepository.save(adaptUserInfoToUser(userInfo));
     }
 
 	public User updateUser(UserInfo userInfo) {
