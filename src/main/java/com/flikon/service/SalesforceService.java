@@ -1,4 +1,4 @@
-package com.krew.service;
+package com.flikon.service;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -22,8 +22,8 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.krew.salesforce.OAuthTokenInfo;
-import com.krew.wrapper.UserInfo;
+import com.flikon.salesforce.OAuthTokenInfo;
+import com.flikon.wrapper.UserInfo;
 
 @Service
 public class SalesforceService {

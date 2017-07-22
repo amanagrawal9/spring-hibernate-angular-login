@@ -1,4 +1,4 @@
-package com.krew.service;
+package com.flikon.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.krew.service;
+package com.flikon.service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,8 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.krew.entity.User;
-import com.krew.repository.UserRepository;
+import com.flikon.entity.User;
+import com.flikon.repository.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService{

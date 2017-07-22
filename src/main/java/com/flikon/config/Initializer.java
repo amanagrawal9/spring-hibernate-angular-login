@@ -1,4 +1,4 @@
-package com.krew.config;
+package com.flikon.config;
 
 import java.util.EnumSet;
 
@@ -23,7 +23,7 @@ public class Initializer implements WebApplicationInitializer {
 	public void onStartup(ServletContext servletContext)
 			throws ServletException {
 		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-		context.setConfigLocation("com.krew.config");
+		context.setConfigLocation("com.flikon.config");
 
 		FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encodingFilter", new org.springframework.web.filter.CharacterEncodingFilter());
 		encodingFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");

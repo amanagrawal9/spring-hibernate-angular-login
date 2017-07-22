@@ -1,14 +1,14 @@
-package com.krew.service;
+package com.flikon.service;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.krew.entity.User;
-import com.krew.repository.RoleRepository;
-import com.krew.repository.UserRepository;
-import com.krew.wrapper.UserInfo;
+import com.flikon.entity.User;
+import com.flikon.repository.RoleRepository;
+import com.flikon.repository.UserRepository;
+import com.flikon.wrapper.UserInfo;
 
 @Service
 public class UserService{

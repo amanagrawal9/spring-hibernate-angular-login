@@ -1,4 +1,4 @@
-package com.krew.salesforce;
+package com.flikon.salesforce;
 
 public class Contact {
 	

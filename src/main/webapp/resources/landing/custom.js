@@ -65,7 +65,7 @@
 	var servicesPills = setInterval(function () {
 
 		if(!isPaused) {
-            $($('.krew-services .nav-pills > li > a').get(index)).trigger('click');
+            $($('.flikon-services .nav-pills > li > a').get(index)).trigger('click');
             index++;
 
             if(index === 5){
@@ -77,13 +77,13 @@
 
     }, 5000);
 
-	$('.krew-services .tab-content .tab-pane').hover(function (ev) {
+	$('.flikon-services .tab-content .tab-pane').hover(function (ev) {
         clearInterval(servicesPills);
     },function (ev) {
         servicesPills = setInterval(function () {
 
 			if(!isPaused) {
-	            $($('.krew-services .nav-pills > li > a').get(index)).trigger('click');
+	            $($('.flikon-services .nav-pills > li > a').get(index)).trigger('click');
 	            index++;
 
 	            if(index === 5){

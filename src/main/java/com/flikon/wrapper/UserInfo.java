@@ -1,4 +1,4 @@
-package com.krew.wrapper;
+package com.flikon.wrapper;
 
 public class UserInfo {
 

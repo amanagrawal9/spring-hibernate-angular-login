@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.krew</groupId>
-	<artifactId>krew</artifactId>
+	<groupId>com.flikon</groupId>
+	<artifactId>flikon</artifactId>
 	<version>1.0</version>
-	<name>Krew</name>
-	<description>Data collection from sensing devices for Krew</description>
+	<name>Flik On</name>
+	<description>Web TV App</description>
 	<packaging>war</packaging>
 	  
 	<properties>
@@ -157,7 +157,7 @@
 	</dependencies>
 	
 	<build>
-        <finalName>krew</finalName>
+        <finalName>flikon</finalName>
         <plugins>
         	<plugin>
                 <groupId>org.apache.maven.plugins</groupId>

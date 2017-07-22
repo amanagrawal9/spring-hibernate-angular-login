@@ -1,4 +1,4 @@
-package com.krew.validator;
+package com.flikon.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -6,9 +6,9 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.krew.entity.User;
-import com.krew.service.UserService;
-import com.krew.wrapper.UserInfo;
+import com.flikon.entity.User;
+import com.flikon.service.UserService;
+import com.flikon.wrapper.UserInfo;
 
 @Component
 public class UserValidator implements Validator {

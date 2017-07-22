@@ -1,4 +1,4 @@
-package com.krew.config;
+package com.flikon.config;
 
 import java.util.Properties;
 
@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Profile("default")
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.krew.repository")
+@EnableJpaRepositories(basePackages = "com.flikon.repository")
 public class PersistenceConfig {
 
 	@Value("${dataSource.driverClassName}")
@@ -73,7 +73,7 @@ public class PersistenceConfig {
 		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
 		entityManagerFactory
-				.setPackagesToScan("com.krew.entity");
+				.setPackagesToScan("com.flikon.entity");
 		entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter());
 		entityManagerFactory.setJpaProperties(new Properties());
 		entityManagerFactory.setPersistenceUnitName(persistentUnitName);

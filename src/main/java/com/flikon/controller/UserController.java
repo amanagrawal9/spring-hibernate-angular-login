@@ -1,23 +1,20 @@
-package com.krew.controller;
+package com.flikon.controller;
 
-import com.krew.entity.User;
+import com.flikon.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.krew.service.SecurityService;
-import com.krew.service.UserService;
-import com.krew.validator.UserValidator;
-import com.krew.wrapper.UserInfo;
+import com.flikon.service.SecurityService;
+import com.flikon.service.UserService;
+import com.flikon.validator.UserValidator;
+import com.flikon.wrapper.UserInfo;
 
 @Controller
 public class UserController {

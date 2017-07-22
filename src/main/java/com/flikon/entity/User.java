@@ -1,4 +1,4 @@
-package com.krew.entity;
+package com.flikon.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

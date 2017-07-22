@@ -1,8 +1,8 @@
-package com.krew.repository;
+package com.flikon.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.krew.entity.User;
+import com.flikon.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmailId(String emailId);

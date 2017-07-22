@@ -1,4 +1,4 @@
-package com.krew.config;
+package com.flikon.config;
 
 import javax.persistence.EntityManagerFactory;
 
@@ -22,11 +22,11 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import com.krew.util.Constants;
+import com.flikon.util.Constants;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.krew")
+@ComponentScan("com.flikon")
 @PropertySource("classpath:application.properties")
 @EnableScheduling
 public class WebAppConfig extends WebMvcConfigurerAdapter {

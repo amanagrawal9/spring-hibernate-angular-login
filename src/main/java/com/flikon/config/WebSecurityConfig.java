@@ -1,4 +1,4 @@
-package com.krew.config;
+package com.flikon.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-@ComponentScan(basePackages = {"com.krew"})
+@ComponentScan(basePackages = {"com.flikon"})
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
@@ -35,7 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
         	.csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/resources/**", "/registration", "/", "/krew/**").permitAll()
+                    .antMatchers("/resources/**", "/registration", "/", "/flikon/**").permitAll()
                     .anyRequest().authenticated()
                     .and()
                 .formLogin()
