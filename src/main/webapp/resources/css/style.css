@@ -1,0 +1,15 @@
+body {
+	padding-top: 70px;
+}
+
+.fitbit-logo {
+	height: 30px;
+}
+
+.fitbit-btn {
+	font-weight: bold;
+	color: #3272aa;
+}
+.nvtooltip {
+	border: none;
+}
