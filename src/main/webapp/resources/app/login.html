@@ -9,95 +9,79 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>RAHAR - Human Activity Recognition</title>
-    
+    <title>FlikOn - Live Web TV</title>
+
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-	    body {
-	        padding-top: 70px;
-	        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-	    }
-	    .fitbit-logo {
-	    	height: 30px;
-	    }
-	    .fitbit-btn {
-	    	font-weight: bold;
-	    	color: #3272aa;
-	    }
-    </style>
+    <link href="resources/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Rahar</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Rahar</h1>
-                <p class="lead">Robust Automated Human Activity Recognition</p>
-                <ul class="list-unstyled">
-                    <li>
-                    	<form action="auth/fitbit" method="GET">
-							<input type="hidden" name="scope" value="profile sleep settings heartrate activity social location weight nutrition" />
-	                    	<button type="submit" class="btn btn-default btn-md fitbit-btn" >
-	                    		<img src="resources/images/fitbit.png" class="fitbit-logo" /> Login with Fitbit
-	                    	</button>
-                    	</form>
-                    </li><br/>
-                    <li>
-                    	<form action="auth/google" method="GET">
-							<input type="hidden" name="scope" value="email" />
-	                    	<button type="submit" class="btn btn-default btn-md fitbit-btn" >
-	                    		<img src="resources/images/fitbit.png" class="fitbit-logo" /> Login with Google
-	                    	</button>
-                    	</form>
-                    </li>
-                </ul>
-            </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">FlikOn</a>
         </div>
-        <!-- /.row -->
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
+</nav>
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="resources/js/jquery.js"></script>
+<!-- Page Content -->
+<div class="container">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="resources/js/bootstrap.min.js"></script>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p class="lead">Login</p>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <input type="email" class="form-control col-md-3" placeholder="Enter email"/>
+                </div><br/><br/><br/><br/>
+
+                <div class="col-md-4 col-md-offset-4">
+                    <input type="password" class="form-control col-md-3" placeholder="Enter password"/>
+                </div><br/><br/><br/><br/>
+
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-default btn-md fitbit-btn" >
+                        <i class="glyphicon glyphicon-log-in"></i> Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- jQuery Version 1.11.1 -->
+<script src="resources/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="resources/js/bootstrap.min.js"></script>
 
 </body>
 
