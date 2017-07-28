@@ -79,6 +79,8 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/resources/app/");
 		viewResolver.setSuffix(".html");
+		/*viewResolver.setPrefix("/WEB-INF/pages/");
+		viewResolver.setSuffix(".jsp");*/
         return viewResolver;
     }
 	

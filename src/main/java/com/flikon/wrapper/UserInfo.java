@@ -8,7 +8,6 @@ public class UserInfo {
     private String contactNo;
     private String password;
     private String passwordConfirm;
-    private String salesforceStatus;
 
 	public UserInfo() {
 	}
@@ -20,7 +19,6 @@ public class UserInfo {
 		this.contactNo = contactNo;
 		this.password = password;
 		this.passwordConfirm = passwordConfirm;
-		this.salesforceStatus = salesforceStatus;
 	}
 
 	public String getEmail() {
@@ -58,11 +56,5 @@ public class UserInfo {
 	}
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
-	}
-	public String getSalesforceStatus() {
-		return salesforceStatus;
-	}
-	public void setSalesforceStatus(String salesforceStatus) {
-		this.salesforceStatus = salesforceStatus;
 	}
 }

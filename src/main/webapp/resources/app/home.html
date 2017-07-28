@@ -2,25 +2,20 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>RAHAR - Human Activity Recognition</title>
+    <title>FlikOn - Live Web TV</title>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css"/>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css" />-->
     <link href="resources/css/style.css" rel="stylesheet">
-
-
-
 </head>
 
-<body ng-app="raharApp">
+<body ng-app="flikOn">
 
    <div ng-include="'resources/app/header.html'"></div>
 
@@ -29,20 +24,13 @@
     <script src="resources/js/jquery.js"></script>
     <script src="resources/js/bootstrap.min.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-alpha.5/angular-ui-router.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="resources/js/angular.min.js"></script>
+	<script src="resources/js/angular-ui-router.min.js"></script>
+	<script src="resources/js/angular-resource.min.js"></script>
+	<script src="resources/js/loading-bar.js"></script>
+	<script src="resources/js/angular-route.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.15/d3.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
-
-	<script src="resources/app/app.js"></script>
-	<script src="resources/app/scatter-chart/scatter-chart-ctrl.js"></script>
-    <script src="resources/app/line-chart/line-chart-ctrl.js"></script>
-    <script src="resources/app/detail-view/detail-view-ctrl.js"></script>
+	<script src="resources/app/app-module.js"></script>
 
 </body>
 
