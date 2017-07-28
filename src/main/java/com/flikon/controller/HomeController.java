@@ -21,7 +21,7 @@ public class HomeController {
 	private UserService userService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index(Model model) {
+	public String index() {
 		String userName = securityService.findLoggedInUsername();
 		if(StringUtils.isBlank(userName)) {
 			return "index";
@@ -31,7 +31,7 @@ public class HomeController {
 	}
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model) {
+    public String login() {
         String userName = securityService.findLoggedInUsername();
         if(StringUtils.isBlank(userName)) {
             return "index";
