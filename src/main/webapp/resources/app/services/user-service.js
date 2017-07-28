@@ -1,5 +1,5 @@
 app.service('UserService', function($resource) {
-	return $resource('/flikon/users/:id/:operation', {
+	return $resource('/flikon/:id/:operation', {
 		id: '@id',
 		operation: '@operation'
 	}, {

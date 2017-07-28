@@ -10,7 +10,7 @@ app.controller('RegistrationCtrl', function ($scope, $http, $state, UserService)
     $scope.user = {};
     $scope.register = function () {
         UserService.register($scope.user).$promise.then(function(data){
-            alert("regiter sucess");
+            $state.go('login');
         }, function(error){
             console.log("Error");
         });
