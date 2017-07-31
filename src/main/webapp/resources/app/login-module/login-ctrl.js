@@ -1,4 +1,4 @@
-app.controller('LoginCtrl', function ($scope, $http) {
+app.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $scope.user = {};
     $scope.login = function () {
@@ -14,4 +14,4 @@ app.controller('LoginCtrl', function ($scope, $http) {
             console.log("Fail Login");
         })
     }
-});
+}]);

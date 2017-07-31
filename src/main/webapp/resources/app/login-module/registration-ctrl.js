@@ -1,11 +1,4 @@
-app.controller('RegistrationCtrl', function ($scope, $http, $state, UserService) {
-
-
-    /*UserService.current_user().$promise.then(function(result){
-        $scope.profile = result.data;
-    }, function(error) {
-        //error code
-    });*/
+app.controller('RegistrationCtrl', ['$scope', '$http', '$state', 'UserService', function ($scope, $http, $state, UserService) {
 
     $scope.user = {};
     $scope.register = function () {
@@ -16,4 +9,4 @@ app.controller('RegistrationCtrl', function ($scope, $http, $state, UserService)
         });
     }
 
-});
+}]);

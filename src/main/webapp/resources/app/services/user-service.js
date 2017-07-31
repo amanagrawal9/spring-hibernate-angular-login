@@ -1,4 +1,4 @@
-app.service('UserService', function($resource) {
+app.service('UserService', ['$resource', function($resource) {
 	return $resource('/flikon/:id/:operation', {
 		id: '@id',
 		operation: '@operation'
@@ -19,4 +19,4 @@ app.service('UserService', function($resource) {
         }
 	});
 	
-});
+}]);

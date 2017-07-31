@@ -1,5 +1,5 @@
-app.controller('LandingCtrl', function ($scope) {
+app.controller('LandingCtrl', ['$scope', function ($scope) {
 	
 
 	
-});
+}]);

@@ -1,6 +1,7 @@
 var app = angular.module("loginModule", ['ui.router', 'ngResource', 'angular-loading-bar']);
 
-app.config(function ($stateProvider, cfpLoadingBarProvider, $urlRouterProvider) {
+app.config([ '$stateProvider', 'cfpLoadingBarProvider', '$urlRouterProvider',
+    function ($stateProvider, cfpLoadingBarProvider, $urlRouterProvider) {
     cfpLoadingBarProvider.includeSpinner = true; // Show the spinner.
     cfpLoadingBarProvider.includeBar = true;
 
@@ -23,4 +24,4 @@ app.config(function ($stateProvider, cfpLoadingBarProvider, $urlRouterProvider) 
             controller: 'RegistrationCtrl'
         });
 
-});
+}]);
