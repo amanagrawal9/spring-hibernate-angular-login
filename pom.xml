@@ -146,84 +146,86 @@
 	
 	<build>
         <finalName>flikon</finalName>
-        <plugins>
-        	<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                    <configuration>
-                       <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${java-version}</source>
-                    <target>${java-version}</target>
-                </configuration>
-            </plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.3</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals><goal>copy</goal></goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>com.github.jsimone</groupId>
-									<artifactId>webapp-runner</artifactId>
-									<version>8.5.11.2</version>
-									<destFileName>webapp-runner.jar</destFileName>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>pl.allegro</groupId>
-				<artifactId>grunt-maven-plugin</artifactId>
-				<version>1.5.0</version>
-				<configuration>
-
-					<!-- relative to src/main/webapp/, default: static -->
-					<jsSourceDirectory>src/main/webapp/resources/app</jsSourceDirectory>
-
-					<!-- example options usage to get verbose output in logs -->
-					<gruntOptions>
-						<gruntOption>--verbose</gruntOption>
-					</gruntOptions>
-
-					<!-- example npm install env variable -->
-					<npmEnvironmentVar>
-						<PHANTOMJS_CDNURL>http://cnpmjs.org/downloads</PHANTOMJS_CDNURL>
-					</npmEnvironmentVar>
-
-					<!-- example options usage to filter variables in given resource -->
-					<filteredResources>
-						<filteredResource>maven-properties.json</filteredResource>
-					</filteredResources>
-
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<!--<goal>create-resources</goal>-->
-							<goal>npm</goal>
-							<!--<goal>bower</goal>-->
-							<goal>grunt</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-        </plugins>
+       	<pluginManagement>
+	        <plugins>
+	        	<plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-war-plugin</artifactId>
+	                <version>2.6</version>
+	                    <configuration>
+	                       <failOnMissingWebXml>false</failOnMissingWebXml>
+	                    </configuration>
+	            </plugin>
+	            <plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-compiler-plugin</artifactId>
+	                <version>3.5.1</version>
+	                <configuration>
+	                    <source>${java-version}</source>
+	                    <target>${java-version}</target>
+	                </configuration>
+	            </plugin>
+	
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.3</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals><goal>copy</goal></goals>
+							<configuration>
+								<artifactItems>
+									<artifactItem>
+										<groupId>com.github.jsimone</groupId>
+										<artifactId>webapp-runner</artifactId>
+										<version>8.5.11.2</version>
+										<destFileName>webapp-runner.jar</destFileName>
+									</artifactItem>
+								</artifactItems>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+	
+				<plugin>
+					<groupId>pl.allegro</groupId>
+					<artifactId>grunt-maven-plugin</artifactId>
+					<version>1.5.0</version>
+					<configuration>
+	
+						<!-- relative to src/main/webapp/, default: static -->
+						<jsSourceDirectory>src/main/webapp/resources/app</jsSourceDirectory>
+	
+						<!-- example options usage to get verbose output in logs -->
+						<gruntOptions>
+							<gruntOption>--verbose</gruntOption>
+						</gruntOptions>
+	
+						<!-- example npm install env variable -->
+						<npmEnvironmentVar>
+							<PHANTOMJS_CDNURL>http://cnpmjs.org/downloads</PHANTOMJS_CDNURL>
+						</npmEnvironmentVar>
+	
+						<!-- example options usage to filter variables in given resource -->
+						<filteredResources>
+							<filteredResource>maven-properties.json</filteredResource>
+						</filteredResources>
+	
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<!--<goal>create-resources</goal>-->
+								<goal>npm</goal>
+								<!--<goal>bower</goal>-->
+								<goal>grunt</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+	
+	        </plugins>
+        </pluginManagement>
     </build>
 </project>
